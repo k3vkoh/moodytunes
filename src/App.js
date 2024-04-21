@@ -1,23 +1,26 @@
-import logo from './logo.svg';
 import './App.css';
+import Sidebar from './components/Sidebar';
+import Main from './components/Main';
+import { useState, useEffect } from 'react';
+import { fetchPlaylists } from './services/api';
 
 function App() {
+  const [playlists, setPlaylists] = useState([]);
+  const [selectedPlaylist, setSelectedPlaylist] = useState(null);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const playlistsData = await fetchPlaylists();
+      setPlaylists(playlistsData);
+    };
+
+    fetchData();
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='app'>
+      <Sidebar playlists={playlists} setSelectedPlaylist={setSelectedPlaylist}/>
+      <Main selectedPlaylist={selectedPlaylist} setSelectedPlaylist={setSelectedPlaylist} />
     </div>
   );
 }
