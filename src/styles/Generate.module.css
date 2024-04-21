@@ -1,0 +1,128 @@
+.generate {
+    display: flex;
+    flex-direction: column;
+    height: 92vh;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.examples_container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+.example {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 6vh;
+    width: 70%;
+    color: #BBBBBB;
+    font-size: 1rem;
+    font-weight: 400;
+    border: 2px solid #BBBBBB;
+    border-radius: 10px;
+    margin-top: 2vh;
+    position: relative;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.example:hover {
+    background-color: #FEFEFE;
+}
+
+.example img {
+    position: absolute;
+    right: 0;
+    margin-right: 1vw;
+    width: 2.5vh;
+    height: 2.5vh;
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+.example:hover img {
+    opacity: 1;
+}
+
+.prompt_container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+h1.brand_name {
+    font-size: 2rem;
+    font-weight: 500;
+    color: #555555;
+    margin: 0;
+    padding: 0;
+    letter-spacing: 0.15rem;
+    margin-top: 2vh;
+}
+
+
+.prompt_container p {
+    color: #555555;
+}
+
+.prompt {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between; /* Adjusted for spacing */
+    width: 70%;
+    border: 2px solid #BBBBBB;
+    border-radius: 10px;
+    margin-top: 3vh;
+    position: relative;
+    transition: background-color 0.2s;
+    padding-right: 50px; /* Space for the button */
+    box-sizing: border-box;
+    height: 6vh;
+    margin-bottom: 5vh;
+}
+
+.prompt button {
+    min-width: 3.5vh;
+    height: 3.5vh;
+    margin: 0 0.5vw;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+button.enter {
+    background-color: #EDEDED;
+    border-radius: 5px;
+}
+
+.prompt button img {
+    width: 3vh;
+    height: auto;
+}
+
+.prompt textarea {
+    flex: 1;
+    font-family: 'Poppins', sans-serif;
+    height: 3vh;
+    color: #555555;
+    font-size: 1rem;
+    font-weight: 400;
+    min-width: 94%; /* Full width of parent */
+    border: none;
+    background-color: transparent;
+    resize: none;
+    cursor: text;
+}
+
+.prompt textarea:focus {
+    outline: none;
+}

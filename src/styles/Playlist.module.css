@@ -1,0 +1,80 @@
+.playlist {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    color: #223043;
+}
+
+.playlist h1 {
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.playlist_header {
+    display: flex;
+    flex-direction: row;
+    align-items: first baseline;
+    justify-content: space-between;
+    margin: 0 5vh;
+    width: 90%;
+}
+
+.playlist h2 {
+    font-size: 2rem;
+    font-weight: 500;
+    margin: 0;
+}
+
+.export {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: #223043;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.export img {
+    width: 3vh;
+    height: 3vh;
+    margin-left: 0.5vw;
+}
+
+.songs_grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Create three columns that each take up one fraction of the available space */
+    gap: 1vw;
+    width: 90%;
+    height: 70vh;
+    margin: 5vh 0 0 0;
+    overflow-y: auto;
+}
+
+.song {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    height: 40vh;
+}
+
+.song img {
+    width: 30vh;
+    height: 30vh;
+    margin-right: 1vw;
+    border-radius: 5px;
+}
+
+.song h2 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin: 0.5vh 0 0 0;
+}
+
+.song h3 {
+    font-size: 1rem;
+    font-weight: 400;
+    margin: 0;
+    color: #BBBBBB;
+}

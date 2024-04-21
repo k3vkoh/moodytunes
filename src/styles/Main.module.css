@@ -8,6 +8,14 @@
     position: fixed;
 }
 
+.header {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 8vh;
+    align-items: center;
+}
+
 button.new_playlist {
     background-color: #157aff;
     color: #FFFFFF;
@@ -17,7 +25,11 @@ button.new_playlist {
     border-radius: 5px;
     height: 4vh;
     width: 10vw;
-    margin: 2vh 0 0 2vw;
+    margin-left: 2vw;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.2s;
+}
+
+button.new_playlist:hover {
+    background-color: #338BFF;
 }
