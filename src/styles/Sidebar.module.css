@@ -1,0 +1,97 @@
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    background-color: #FFFFFF;
+    width: 16vw;
+    height: 100vh;
+    align-items: center;
+    position: fixed;
+}
+
+h1.brand {
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: #000000;
+    margin: 0;
+    padding: 0;
+    letter-spacing: 0.12rem;
+    margin-top: 2vh;
+}
+
+h2.rg {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #BBBBBB;
+    margin: 0;
+    padding: 0;
+    letter-spacing: 0.08rem;
+    margin-top: 2vh;
+}
+
+.playlists {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    list-style: none;
+    padding: 0;
+    margin: 2vh 0 0 0;
+    height: 80vh;
+    overflow-y: auto;
+}
+
+.playlists li {
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    min-height: 8vh;
+    max-height: 8vh;
+    width: 100%;
+    transition: background-color 0.3s;
+    align-items: center;
+    color: #223043;
+}
+
+.playlists li img {
+    width: 5vh;
+    height: 5vh;
+    margin: 0 1vw;
+    border-radius: 5px;
+}
+
+.playlists li:hover {
+    background-color: #EFEFEF;
+}
+
+.playlist_info {
+    display: flex;
+    flex-direction: column;
+}
+
+.playlist_info h2 {
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+}
+
+.playlist_info h3 {
+    font-size: 0.8rem;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    color: #BBBBBB;
+}
+
+.profile {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+}
+
+.profile img {
+    width: 4.5vh;
+    height: 4.5vh;
+    margin: 0 1.5vw 0 1vw;
+    border-radius: 50%;
+}

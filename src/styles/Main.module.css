@@ -1,0 +1,23 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    background-color: #FAFAFA;
+    width: 84vw;
+    margin-left: 16vw;
+    height: 100vh;
+    position: fixed;
+}
+
+button.new_playlist {
+    background-color: #157aff;
+    color: #FFFFFF;
+    font-size: 1rem;
+    font-weight: 400;
+    border: none;
+    border-radius: 5px;
+    height: 4vh;
+    width: 10vw;
+    margin: 2vh 0 0 2vw;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
