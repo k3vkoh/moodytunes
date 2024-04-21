@@ -19,7 +19,7 @@ function App() {
 
   return (
     <div className='app'>
-      <Sidebar playlists={playlists} setSelectedPlaylist={setSelectedPlaylist}/>
+      <Sidebar playlists={playlists} selectedPlaylist={selectedPlaylist} setSelectedPlaylist={setSelectedPlaylist}/>
       <Main selectedPlaylist={selectedPlaylist} setSelectedPlaylist={setSelectedPlaylist} />
     </div>
   );

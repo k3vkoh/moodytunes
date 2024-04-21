@@ -51,6 +51,10 @@ h2.rg {
     color: #223043;
 }
 
+.playlists li.selected {
+    background-color: #EFEFEF;
+}
+
 .playlists li img {
     width: 5vh;
     height: 5vh;

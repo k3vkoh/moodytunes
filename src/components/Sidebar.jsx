@@ -2,7 +2,7 @@ import React from 'react';
 import css from '../styles/Sidebar.module.css';
 import { fetchPlaylists } from '../services/api';
 
-export default function Sidebar({ playlists, setSelectedPlaylist }) {
+export default function Sidebar({ playlists, selectedPlaylist, setSelectedPlaylist }) {
     return (
         <div className={css.sidebar}>
             <h1 className={css.brand}>MOODYTUNES</h1>
@@ -10,7 +10,7 @@ export default function Sidebar({ playlists, setSelectedPlaylist }) {
             <ul className={css.playlists}>
                 {playlists.map((playlist, index) => {
                     return (
-                        <li key={index} onClick={() => setSelectedPlaylist(playlists[index])}>
+                        <li className={selectedPlaylist == playlist ? css.selected : ''} key={index} onClick={() => setSelectedPlaylist(playlists[index])}>
                             <img src={playlist.image ? playlist.image : '/gradient.png'} alt={playlist.title} />
                             <div className={css.playlist_info}>
                                 <h2>{playlist.title}</h2>
