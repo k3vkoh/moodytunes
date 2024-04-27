@@ -4,7 +4,7 @@ import css from '../styles/Playlist.module.css';
 export default function Playlist({ playlist }) {
     return (
         <div className={css.playlist}>
-            <h1>{playlist.title}</h1>
+            <h1>{playlist.name}</h1>
             <div className={css.playlist_header}>
                 <h2>
                     {playlist.songs.length} songs

@@ -10,7 +10,7 @@ function App() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const playlistsData = await fetchPlaylists();
+      const playlistsData = fetchPlaylists();
       setPlaylists(playlistsData);
     };
 
@@ -20,7 +20,7 @@ function App() {
   return (
     <div className='app'>
       <Sidebar playlists={playlists} selectedPlaylist={selectedPlaylist} setSelectedPlaylist={setSelectedPlaylist}/>
-      <Main selectedPlaylist={selectedPlaylist} setSelectedPlaylist={setSelectedPlaylist} />
+      <Main playlists={playlists} selectedPlaylist={selectedPlaylist} setSelectedPlaylist={setSelectedPlaylist} />
     </div>
   );
 }

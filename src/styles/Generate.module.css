@@ -109,6 +109,19 @@ button.enter {
     height: auto;
 }
 
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.prompt button img.spin {
+    animation: spin 2s linear infinite;
+}
+
 .prompt textarea {
     flex: 1;
     font-family: 'Poppins', sans-serif;

@@ -1,6 +1,5 @@
 import React from 'react';
 import css from '../styles/Sidebar.module.css';
-import { fetchPlaylists } from '../services/api';
 
 export default function Sidebar({ playlists, selectedPlaylist, setSelectedPlaylist }) {
     return (
@@ -13,7 +12,7 @@ export default function Sidebar({ playlists, selectedPlaylist, setSelectedPlayli
                         <li className={selectedPlaylist == playlist ? css.selected : ''} key={index} onClick={() => setSelectedPlaylist(playlists[index])}>
                             <img src={playlist.image ? playlist.image : '/gradient.png'} alt={playlist.title} />
                             <div className={css.playlist_info}>
-                                <h2>{playlist.title}</h2>
+                                <h2>{playlist.name}</h2>
                                 <h3>{`${playlist.songs.length} songs`}</h3>
                             </div>
                         </li>
